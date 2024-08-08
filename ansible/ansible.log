@@ -1,0 +1,610 @@
+2024-08-08 12:30:43,352 p=88156 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 12:30:43,408 p=88156 u=iurephu n=ansible | PLAY [worker_nodeN] ************************************************************************************************************************
+2024-08-08 12:30:43,422 p=88156 u=iurephu n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2024-08-08 12:30:50,151 p=88156 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.212.67.189 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:30:50,151 p=88156 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:30:50,401 p=88156 u=iurephu n=ansible | [WARNING]: Platform linux on host 54.161.158.150 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:30:50,401 p=88156 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:30:50,469 p=88156 u=iurephu n=ansible | [WARNING]: Platform linux on host 18.233.6.162 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:30:50,469 p=88156 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:30:50,480 p=88156 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.202.161.153 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:30:50,480 p=88156 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:30:51,764 p=88156 u=iurephu n=ansible | [WARNING]: Platform linux on host 54.144.126.16 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:30:51,764 p=88156 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:30:51,790 p=88156 u=iurephu n=ansible | TASK [Install packages that allow apt to be used over HTTPS] *******************************************************************************
+2024-08-08 12:30:55,207 p=88156 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:30:55,250 p=88156 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:30:55,256 p=88156 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:30:55,314 p=88156 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:30:55,428 p=88156 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:30:55,438 p=88156 u=iurephu n=ansible | TASK [Add Docker GPG key] ******************************************************************************************************************
+2024-08-08 12:30:58,791 p=88156 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:30:58,910 p=88156 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:30:58,936 p=88156 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:30:58,950 p=88156 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:30:59,069 p=88156 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:30:59,079 p=88156 u=iurephu n=ansible | TASK [Add Docker APT repository] ***********************************************************************************************************
+2024-08-08 12:31:02,331 p=88156 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:31:02,463 p=88156 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:31:02,464 p=88156 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:31:02,487 p=88156 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:31:02,660 p=88156 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:31:02,671 p=88156 u=iurephu n=ansible | TASK [Install containerd] ******************************************************************************************************************
+2024-08-08 12:31:05,767 p=88156 u=iurephu n=ansible | fatal: [44.212.67.189]: FAILED! => {"changed": false, "msg": "No package matching 'containerd.io' is available"}
+2024-08-08 12:31:05,924 p=88156 u=iurephu n=ansible | fatal: [44.202.161.153]: FAILED! => {"changed": false, "msg": "No package matching 'containerd.io' is available"}
+2024-08-08 12:31:05,960 p=88156 u=iurephu n=ansible | fatal: [54.161.158.150]: FAILED! => {"changed": false, "msg": "No package matching 'containerd.io' is available"}
+2024-08-08 12:31:06,214 p=88156 u=iurephu n=ansible | fatal: [54.144.126.16]: FAILED! => {"changed": false, "msg": "No package matching 'containerd.io' is available"}
+2024-08-08 12:31:06,272 p=88156 u=iurephu n=ansible | fatal: [18.233.6.162]: FAILED! => {"changed": false, "msg": "No package matching 'containerd.io' is available"}
+2024-08-08 12:31:06,273 p=88156 u=iurephu n=ansible | PLAY RECAP *********************************************************************************************************************************
+2024-08-08 12:31:06,274 p=88156 u=iurephu n=ansible | 18.233.6.162               : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 12:31:06,274 p=88156 u=iurephu n=ansible | 44.202.161.153             : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 12:31:06,274 p=88156 u=iurephu n=ansible | 44.212.67.189              : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 12:31:06,274 p=88156 u=iurephu n=ansible | 54.144.126.16              : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 12:31:06,274 p=88156 u=iurephu n=ansible | 54.161.158.150             : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 12:31:41,650 p=89067 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 12:31:41,705 p=89067 u=iurephu n=ansible | PLAY [worker_nodeN] ************************************************************************************************************************
+2024-08-08 12:31:41,709 p=89067 u=iurephu n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2024-08-08 12:31:47,164 p=89067 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.212.67.189 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:31:47,165 p=89067 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:31:47,306 p=89067 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.202.161.153 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:31:47,306 p=89067 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:31:47,307 p=89067 u=iurephu n=ansible | [WARNING]: Platform linux on host 54.161.158.150 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:31:47,307 p=89067 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:31:47,310 p=89067 u=iurephu n=ansible | [WARNING]: Platform linux on host 18.233.6.162 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:31:47,310 p=89067 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:31:47,672 p=89067 u=iurephu n=ansible | [WARNING]: Platform linux on host 54.144.126.16 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:31:47,673 p=89067 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:31:47,698 p=89067 u=iurephu n=ansible | TASK [Install packages that allow apt to be used over HTTPS] *******************************************************************************
+2024-08-08 12:32:06,301 p=89067 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:32:06,332 p=89067 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:32:07,004 p=89067 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:32:07,519 p=89067 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:32:07,534 p=89067 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:32:07,543 p=89067 u=iurephu n=ansible | TASK [Add Docker GPG key] ******************************************************************************************************************
+2024-08-08 12:32:11,360 p=89067 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:32:11,477 p=89067 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:32:11,481 p=89067 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:32:11,595 p=89067 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:32:11,658 p=89067 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:32:11,669 p=89067 u=iurephu n=ansible | TASK [Add Docker APT repository] ***********************************************************************************************************
+2024-08-08 12:32:19,822 p=89067 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:32:20,085 p=89067 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:32:20,127 p=89067 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:32:20,189 p=89067 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:32:20,370 p=89067 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:32:20,384 p=89067 u=iurephu n=ansible | TASK [Install containerd] ******************************************************************************************************************
+2024-08-08 12:32:33,750 p=89067 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:32:33,995 p=89067 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:32:34,758 p=89067 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:32:35,605 p=89067 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:32:36,109 p=89067 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:32:36,130 p=89067 u=iurephu n=ansible | TASK [Configure containerd] ****************************************************************************************************************
+2024-08-08 12:32:36,744 p=89067 u=iurephu n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-08-08 12:32:36,745 p=89067 u=iurephu n=ansible | fatal: [44.212.67.189]: FAILED! => {"changed": false, "msg": "Could not find or access 'files/config.toml'\nSearched in:\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/config.toml on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-08-08 12:32:36,817 p=89067 u=iurephu n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-08-08 12:32:36,817 p=89067 u=iurephu n=ansible | fatal: [54.161.158.150]: FAILED! => {"changed": false, "msg": "Could not find or access 'files/config.toml'\nSearched in:\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/config.toml on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-08-08 12:32:36,818 p=89067 u=iurephu n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-08-08 12:32:36,818 p=89067 u=iurephu n=ansible | fatal: [18.233.6.162]: FAILED! => {"changed": false, "msg": "Could not find or access 'files/config.toml'\nSearched in:\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/config.toml on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-08-08 12:32:36,818 p=89067 u=iurephu n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-08-08 12:32:36,819 p=89067 u=iurephu n=ansible | fatal: [44.202.161.153]: FAILED! => {"changed": false, "msg": "Could not find or access 'files/config.toml'\nSearched in:\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/config.toml on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-08-08 12:32:36,864 p=89067 u=iurephu n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-08-08 12:32:36,865 p=89067 u=iurephu n=ansible | fatal: [54.144.126.16]: FAILED! => {"changed": false, "msg": "Could not find or access 'files/config.toml'\nSearched in:\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/files/config.toml\n\t/home/iurephu/terraform/k8s-baremetal/ansible/files/config.toml on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-08-08 12:32:36,865 p=89067 u=iurephu n=ansible | PLAY RECAP *********************************************************************************************************************************
+2024-08-08 12:32:36,866 p=89067 u=iurephu n=ansible | 18.233.6.162               : ok=5    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 12:32:36,866 p=89067 u=iurephu n=ansible | 44.202.161.153             : ok=5    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 12:32:36,866 p=89067 u=iurephu n=ansible | 44.212.67.189              : ok=5    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 12:32:36,866 p=89067 u=iurephu n=ansible | 54.144.126.16              : ok=5    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 12:32:36,866 p=89067 u=iurephu n=ansible | 54.161.158.150             : ok=5    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 12:33:29,258 p=90309 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 12:33:29,313 p=90309 u=iurephu n=ansible | PLAY [worker_nodeN] ************************************************************************************************************************
+2024-08-08 12:33:29,317 p=90309 u=iurephu n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2024-08-08 12:33:34,478 p=90309 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.212.67.189 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:33:34,478 p=90309 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:33:34,517 p=90309 u=iurephu n=ansible | [WARNING]: Platform linux on host 54.161.158.150 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:33:34,517 p=90309 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:33:34,518 p=90309 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.202.161.153 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:33:34,518 p=90309 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:33:34,583 p=90309 u=iurephu n=ansible | [WARNING]: Platform linux on host 18.233.6.162 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:33:34,583 p=90309 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:33:34,889 p=90309 u=iurephu n=ansible | [WARNING]: Platform linux on host 54.144.126.16 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:33:34,890 p=90309 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:33:34,916 p=90309 u=iurephu n=ansible | TASK [Install packages that allow apt to be used over HTTPS] *******************************************************************************
+2024-08-08 12:33:39,697 p=90309 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:33:39,744 p=90309 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:33:39,774 p=90309 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:33:39,844 p=90309 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:33:39,984 p=90309 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:33:39,995 p=90309 u=iurephu n=ansible | TASK [Add Docker GPG key] ******************************************************************************************************************
+2024-08-08 12:33:43,259 p=90309 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:33:43,415 p=90309 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:33:43,425 p=90309 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:33:43,425 p=90309 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:33:43,626 p=90309 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:33:43,636 p=90309 u=iurephu n=ansible | TASK [Add Docker APT repository] ***********************************************************************************************************
+2024-08-08 12:33:46,823 p=90309 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:33:46,900 p=90309 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:33:46,927 p=90309 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:33:46,928 p=90309 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:33:47,102 p=90309 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:33:47,113 p=90309 u=iurephu n=ansible | TASK [Install containerd] ******************************************************************************************************************
+2024-08-08 12:33:50,747 p=90309 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:33:50,964 p=90309 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:33:50,976 p=90309 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:33:51,015 p=90309 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:33:51,131 p=90309 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:33:51,143 p=90309 u=iurephu n=ansible | TASK [Configure containerd] ****************************************************************************************************************
+2024-08-08 12:33:57,252 p=90309 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:33:57,669 p=90309 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:33:57,762 p=90309 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:33:57,770 p=90309 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:33:58,226 p=90309 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:33:58,240 p=90309 u=iurephu n=ansible | TASK [Remove swapfile from /etc/fstab] *****************************************************************************************************
+2024-08-08 12:34:02,017 p=90309 u=iurephu n=ansible | ok: [18.233.6.162] => (item=swap)
+2024-08-08 12:34:02,033 p=90309 u=iurephu n=ansible | ok: [44.212.67.189] => (item=swap)
+2024-08-08 12:34:02,076 p=90309 u=iurephu n=ansible | ok: [44.202.161.153] => (item=swap)
+2024-08-08 12:34:02,112 p=90309 u=iurephu n=ansible | ok: [54.161.158.150] => (item=swap)
+2024-08-08 12:34:02,507 p=90309 u=iurephu n=ansible | ok: [54.144.126.16] => (item=swap)
+2024-08-08 12:34:04,615 p=90309 u=iurephu n=ansible | ok: [44.212.67.189] => (item=none)
+2024-08-08 12:34:04,779 p=90309 u=iurephu n=ansible | ok: [18.233.6.162] => (item=none)
+2024-08-08 12:34:04,780 p=90309 u=iurephu n=ansible | ok: [44.202.161.153] => (item=none)
+2024-08-08 12:34:04,952 p=90309 u=iurephu n=ansible | ok: [54.161.158.150] => (item=none)
+2024-08-08 12:34:05,899 p=90309 u=iurephu n=ansible | ok: [54.144.126.16] => (item=none)
+2024-08-08 12:34:05,919 p=90309 u=iurephu n=ansible | TASK [Disable swap] ************************************************************************************************************************
+2024-08-08 12:34:05,936 p=90309 u=iurephu n=ansible | skipping: [44.212.67.189]
+2024-08-08 12:34:05,943 p=90309 u=iurephu n=ansible | skipping: [54.144.126.16]
+2024-08-08 12:34:05,958 p=90309 u=iurephu n=ansible | skipping: [54.161.158.150]
+2024-08-08 12:34:05,958 p=90309 u=iurephu n=ansible | skipping: [44.202.161.153]
+2024-08-08 12:34:05,963 p=90309 u=iurephu n=ansible | skipping: [18.233.6.162]
+2024-08-08 12:34:05,967 p=90309 u=iurephu n=ansible | TASK [Create directory for Kubernetes apt key] *********************************************************************************************
+2024-08-08 12:34:08,970 p=90309 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:34:08,970 p=90309 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:34:09,010 p=90309 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:34:09,136 p=90309 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:34:09,261 p=90309 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:34:09,323 p=90309 u=iurephu n=ansible | TASK [Download the Kubernetes apt key] *****************************************************************************************************
+2024-08-08 12:34:12,541 p=90309 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:34:12,818 p=90309 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:34:12,822 p=90309 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:34:12,828 p=90309 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:34:12,972 p=90309 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:34:12,983 p=90309 u=iurephu n=ansible | TASK [Add Kubernetes apt repository] *******************************************************************************************************
+2024-08-08 12:34:19,096 p=90309 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:34:19,614 p=90309 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:34:19,615 p=90309 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:34:19,711 p=90309 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:34:20,138 p=90309 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:34:20,145 p=90309 u=iurephu n=ansible | TASK [Update the apt package index again] **************************************************************************************************
+2024-08-08 12:34:27,897 p=90309 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:34:27,918 p=90309 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:34:27,918 p=90309 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:34:27,919 p=90309 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:34:27,934 p=90309 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:34:27,939 p=90309 u=iurephu n=ansible | TASK [Install Kubernetes binaries] *********************************************************************************************************
+2024-08-08 12:34:43,938 p=90309 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:34:44,009 p=90309 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:34:44,261 p=90309 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:34:44,367 p=90309 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:34:45,117 p=90309 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:34:45,139 p=90309 u=iurephu n=ansible | TASK [Stop kubelet] ************************************************************************************************************************
+2024-08-08 12:34:50,239 p=90309 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:34:50,445 p=90309 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:34:50,574 p=90309 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:34:50,862 p=90309 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:34:51,393 p=90309 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:34:51,405 p=90309 u=iurephu n=ansible | TASK [Load overlay module] *****************************************************************************************************************
+2024-08-08 12:34:54,199 p=90309 u=iurephu n=ansible | ok: [44.212.67.189]
+2024-08-08 12:34:54,224 p=90309 u=iurephu n=ansible | ok: [18.233.6.162]
+2024-08-08 12:34:54,331 p=90309 u=iurephu n=ansible | ok: [54.161.158.150]
+2024-08-08 12:34:54,507 p=90309 u=iurephu n=ansible | ok: [54.144.126.16]
+2024-08-08 12:34:54,844 p=90309 u=iurephu n=ansible | ok: [44.202.161.153]
+2024-08-08 12:34:54,849 p=90309 u=iurephu n=ansible | TASK [Load br_netfilter module] ************************************************************************************************************
+2024-08-08 12:34:57,438 p=90309 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:34:57,671 p=90309 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:34:57,777 p=90309 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:34:57,942 p=90309 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:34:58,026 p=90309 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:34:58,035 p=90309 u=iurephu n=ansible | TASK [Persist modules] *********************************************************************************************************************
+2024-08-08 12:35:04,374 p=90309 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:35:04,804 p=90309 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:35:04,805 p=90309 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:35:04,805 p=90309 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:35:05,521 p=90309 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:35:05,531 p=90309 u=iurephu n=ansible | TASK [Set sysctl params] *******************************************************************************************************************
+2024-08-08 12:35:11,491 p=90309 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:35:11,806 p=90309 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:35:11,810 p=90309 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:35:11,928 p=90309 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:35:12,457 p=90309 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:35:12,461 p=90309 u=iurephu n=ansible | TASK [Load sysctl settings] ****************************************************************************************************************
+2024-08-08 12:35:15,296 p=90309 u=iurephu n=ansible | changed: [44.212.67.189]
+2024-08-08 12:35:15,377 p=90309 u=iurephu n=ansible | changed: [54.161.158.150]
+2024-08-08 12:35:15,379 p=90309 u=iurephu n=ansible | changed: [18.233.6.162]
+2024-08-08 12:35:15,380 p=90309 u=iurephu n=ansible | changed: [44.202.161.153]
+2024-08-08 12:35:15,575 p=90309 u=iurephu n=ansible | changed: [54.144.126.16]
+2024-08-08 12:35:15,638 p=90309 u=iurephu n=ansible | PLAY RECAP *********************************************************************************************************************************
+2024-08-08 12:35:15,638 p=90309 u=iurephu n=ansible | 18.233.6.162               : ok=18   changed=9    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-08 12:35:15,638 p=90309 u=iurephu n=ansible | 44.202.161.153             : ok=18   changed=9    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-08 12:35:15,638 p=90309 u=iurephu n=ansible | 44.212.67.189              : ok=18   changed=9    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-08 12:35:15,638 p=90309 u=iurephu n=ansible | 54.144.126.16              : ok=18   changed=9    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-08 12:35:15,638 p=90309 u=iurephu n=ansible | 54.161.158.150             : ok=18   changed=9    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-08 12:43:46,156 p=95816 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 12:43:46,203 p=95816 u=iurephu n=ansible | PLAY [ha-proxy] ****************************************************************************************************************************
+2024-08-08 12:43:46,207 p=95816 u=iurephu n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2024-08-08 12:43:53,513 p=95816 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.204.90.218 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 12:43:53,513 p=95816 u=iurephu n=ansible | ok: [44.204.90.218]
+2024-08-08 12:43:53,526 p=95816 u=iurephu n=ansible | TASK [Install ha-proxy] ********************************************************************************************************************
+2024-08-08 12:44:25,801 p=95816 u=iurephu n=ansible | changed: [44.204.90.218]
+2024-08-08 12:44:25,813 p=95816 u=iurephu n=ansible | TASK [Start ha-proxy] **********************************************************************************************************************
+2024-08-08 12:44:29,222 p=95816 u=iurephu n=ansible | ok: [44.204.90.218]
+2024-08-08 12:44:29,246 p=95816 u=iurephu n=ansible | PLAY RECAP *********************************************************************************************************************************
+2024-08-08 12:44:29,246 p=95816 u=iurephu n=ansible | 44.204.90.218              : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-08 13:04:22,647 p=103627 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 13:04:22,699 p=103627 u=iurephu n=ansible | PLAY [ha-proxy] ****************************************************************************************************************************
+2024-08-08 13:04:22,703 p=103627 u=iurephu n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2024-08-08 13:04:28,581 p=103627 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.204.90.218 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 13:04:28,581 p=103627 u=iurephu n=ansible | ok: [44.204.90.218]
+2024-08-08 13:04:28,592 p=103627 u=iurephu n=ansible | TASK [Install ha-proxy] ********************************************************************************************************************
+2024-08-08 13:04:32,869 p=103627 u=iurephu n=ansible | ok: [44.204.90.218]
+2024-08-08 13:04:32,880 p=103627 u=iurephu n=ansible | TASK [Add HAProxy frontend configuration] **************************************************************************************************
+2024-08-08 13:04:35,619 p=103627 u=iurephu n=ansible | changed: [44.204.90.218]
+2024-08-08 13:04:35,629 p=103627 u=iurephu n=ansible | TASK [Start ha-proxy] **********************************************************************************************************************
+2024-08-08 13:04:38,755 p=103627 u=iurephu n=ansible | ok: [44.204.90.218]
+2024-08-08 13:04:38,770 p=103627 u=iurephu n=ansible | PLAY RECAP *********************************************************************************************************************************
+2024-08-08 13:04:38,771 p=103627 u=iurephu n=ansible | 44.204.90.218              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-08 13:06:15,844 p=104489 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 13:06:15,891 p=104489 u=iurephu n=ansible | PLAY [ha-proxy] ****************************************************************************************************************************
+2024-08-08 13:06:15,895 p=104489 u=iurephu n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2024-08-08 13:06:21,832 p=104489 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.204.90.218 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 13:06:21,832 p=104489 u=iurephu n=ansible | ok: [44.204.90.218]
+2024-08-08 13:06:21,839 p=104489 u=iurephu n=ansible | TASK [Install ha-proxy] ********************************************************************************************************************
+2024-08-08 13:06:26,110 p=104489 u=iurephu n=ansible | ok: [44.204.90.218]
+2024-08-08 13:06:26,132 p=104489 u=iurephu n=ansible | TASK [Configure ha-proxy] ******************************************************************************************************************
+2024-08-08 13:06:32,357 p=104489 u=iurephu n=ansible | changed: [44.204.90.218]
+2024-08-08 13:06:32,368 p=104489 u=iurephu n=ansible | TASK [Start ha-proxy] **********************************************************************************************************************
+2024-08-08 13:06:35,477 p=104489 u=iurephu n=ansible | ok: [44.204.90.218]
+2024-08-08 13:06:35,498 p=104489 u=iurephu n=ansible | RUNNING HANDLER [Restart ha-proxy] *********************************************************************************************************
+2024-08-08 13:06:38,507 p=104489 u=iurephu n=ansible | fatal: [44.204.90.218]: FAILED! => {"changed": false, "msg": "Unable to restart service haproxy: Job for haproxy.service failed because the control process exited with error code.\nSee \"systemctl status haproxy.service\" and \"journalctl -xeu haproxy.service\" for details.\n"}
+2024-08-08 13:06:38,508 p=104489 u=iurephu n=ansible | PLAY RECAP *********************************************************************************************************************************
+2024-08-08 13:06:38,508 p=104489 u=iurephu n=ansible | 44.204.90.218              : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 15:03:06,805 p=148972 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 15:03:06,849 p=148972 u=iurephu n=ansible | PLAY [ha-proxy] ****************************************************************************************************************************
+2024-08-08 15:03:06,852 p=148972 u=iurephu n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2024-08-08 15:03:13,700 p=148972 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.204.90.218 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 15:03:13,700 p=148972 u=iurephu n=ansible | ok: [44.204.90.218]
+2024-08-08 15:03:13,715 p=148972 u=iurephu n=ansible | TASK [Install ha-proxy] ********************************************************************************************************************
+2024-08-08 15:03:29,270 p=148972 u=iurephu n=ansible | changed: [44.204.90.218]
+2024-08-08 15:03:29,283 p=148972 u=iurephu n=ansible | TASK [Start ha-proxy] **********************************************************************************************************************
+2024-08-08 15:03:32,611 p=148972 u=iurephu n=ansible | [WARNING]: The service (haproxy) is actually an init script but the system is managed by systemd
+
+2024-08-08 15:03:32,612 p=148972 u=iurephu n=ansible | fatal: [44.204.90.218]: FAILED! => {"changed": false, "msg": "Unable to start service haproxy: Failed to start haproxy.service: Unit haproxy.service not found.\n"}
+2024-08-08 15:03:32,613 p=148972 u=iurephu n=ansible | PLAY RECAP *********************************************************************************************************************************
+2024-08-08 15:03:32,613 p=148972 u=iurephu n=ansible | 44.204.90.218              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 15:05:05,423 p=149844 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 15:05:05,467 p=149844 u=iurephu n=ansible | PLAY [ha-proxy] ****************************************************************************************************************************
+2024-08-08 15:05:05,471 p=149844 u=iurephu n=ansible | TASK [Gathering Facts] *********************************************************************************************************************
+2024-08-08 15:05:16,148 p=149844 u=iurephu n=ansible | [WARNING]: Platform linux on host 44.204.90.218 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 15:05:16,148 p=149844 u=iurephu n=ansible | ok: [44.204.90.218]
+2024-08-08 15:05:16,156 p=149844 u=iurephu n=ansible | TASK [Install ha-proxy] ********************************************************************************************************************
+2024-08-08 15:05:27,389 p=149844 u=iurephu n=ansible | changed: [44.204.90.218]
+2024-08-08 15:05:27,402 p=149844 u=iurephu n=ansible | TASK [Start ha-proxy] **********************************************************************************************************************
+2024-08-08 15:05:30,427 p=149844 u=iurephu n=ansible | fatal: [44.204.90.218]: FAILED! => {"changed": false, "msg": "Unable to start service haproxy: Job for haproxy.service failed because the control process exited with error code.\nSee \"systemctl status haproxy.service\" and \"journalctl -xeu haproxy.service\" for details.\n"}
+2024-08-08 15:05:30,428 p=149844 u=iurephu n=ansible | PLAY RECAP *********************************************************************************************************************************
+2024-08-08 15:05:30,429 p=149844 u=iurephu n=ansible | 44.204.90.218              : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-08-08 17:45:41,903 p=213046 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 17:45:46,825 p=213046 u=iurephu n=ansible | [WARNING]: Platform linux on host 3.85.50.52 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:45:46,827 p=213046 u=iurephu n=ansible | 3.85.50.52 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-08 17:45:47,654 p=213046 u=iurephu n=ansible | [WARNING]: Platform linux on host 34.203.236.211 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:45:47,655 p=213046 u=iurephu n=ansible | 34.203.236.211 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-08 17:45:48,441 p=213046 u=iurephu n=ansible | [WARNING]: Platform linux on host 3.86.204.219 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:45:48,442 p=213046 u=iurephu n=ansible | 3.86.204.219 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-08 17:45:48,677 p=213046 u=iurephu n=ansible | [WARNING]: Platform linux on host 54.227.230.67 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:45:48,678 p=213046 u=iurephu n=ansible | 54.227.230.67 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-08 17:45:49,379 p=213046 u=iurephu n=ansible | [WARNING]: Platform linux on host 52.90.58.71 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:45:49,379 p=213046 u=iurephu n=ansible | 52.90.58.71 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-08 17:45:53,885 p=213046 u=iurephu n=ansible | [WARNING]: Platform linux on host 3.87.219.208 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:45:53,885 p=213046 u=iurephu n=ansible | 3.87.219.208 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-08 17:47:07,005 p=213873 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 17:47:07,060 p=213873 u=iurephu n=ansible | PLAY [worker_nodeN] **************************************************************************************************************************
+2024-08-08 17:47:07,064 p=213873 u=iurephu n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2024-08-08 17:47:16,013 p=213873 u=iurephu n=ansible | [WARNING]: Platform linux on host 3.86.204.219 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:47:16,013 p=213873 u=iurephu n=ansible | ok: [3.86.204.219]
+2024-08-08 17:47:16,046 p=213873 u=iurephu n=ansible | [WARNING]: Platform linux on host 3.85.50.52 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:47:16,046 p=213873 u=iurephu n=ansible | ok: [3.85.50.52]
+2024-08-08 17:47:16,112 p=213873 u=iurephu n=ansible | [WARNING]: Platform linux on host 34.203.236.211 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:47:16,112 p=213873 u=iurephu n=ansible | ok: [34.203.236.211]
+2024-08-08 17:47:16,285 p=213873 u=iurephu n=ansible | [WARNING]: Platform linux on host 54.227.230.67 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:47:16,285 p=213873 u=iurephu n=ansible | ok: [54.227.230.67]
+2024-08-08 17:47:16,440 p=213873 u=iurephu n=ansible | [WARNING]: Platform linux on host 52.90.58.71 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:47:16,440 p=213873 u=iurephu n=ansible | ok: [52.90.58.71]
+2024-08-08 17:47:16,471 p=213873 u=iurephu n=ansible | TASK [Install packages that allow apt to be used over HTTPS] *********************************************************************************
+2024-08-08 17:47:35,159 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:47:37,314 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:47:39,247 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:47:39,419 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:47:39,788 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:47:39,798 p=213873 u=iurephu n=ansible | TASK [Add Docker GPG key] ********************************************************************************************************************
+2024-08-08 17:47:43,365 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:47:43,625 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:47:43,756 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:47:43,767 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:47:43,999 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:47:44,010 p=213873 u=iurephu n=ansible | TASK [Add Docker APT repository] *************************************************************************************************************
+2024-08-08 17:47:52,664 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:47:52,871 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:47:54,007 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:47:55,007 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:47:55,430 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:47:55,436 p=213873 u=iurephu n=ansible | TASK [Install containerd] ********************************************************************************************************************
+2024-08-08 17:48:09,215 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:48:11,274 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:48:13,129 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:48:13,701 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:48:14,592 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:48:14,597 p=213873 u=iurephu n=ansible | TASK [Configure containerd] ******************************************************************************************************************
+2024-08-08 17:48:21,337 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:48:21,797 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:48:21,858 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:48:21,858 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:48:21,949 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:48:21,953 p=213873 u=iurephu n=ansible | TASK [Remove swapfile from /etc/fstab] *******************************************************************************************************
+2024-08-08 17:48:25,043 p=213873 u=iurephu n=ansible | ok: [3.86.204.219] => (item=swap)
+2024-08-08 17:48:25,108 p=213873 u=iurephu n=ansible | ok: [52.90.58.71] => (item=swap)
+2024-08-08 17:48:25,204 p=213873 u=iurephu n=ansible | ok: [54.227.230.67] => (item=swap)
+2024-08-08 17:48:25,206 p=213873 u=iurephu n=ansible | ok: [3.85.50.52] => (item=swap)
+2024-08-08 17:48:25,209 p=213873 u=iurephu n=ansible | ok: [34.203.236.211] => (item=swap)
+2024-08-08 17:48:27,903 p=213873 u=iurephu n=ansible | ok: [3.86.204.219] => (item=none)
+2024-08-08 17:48:28,166 p=213873 u=iurephu n=ansible | ok: [52.90.58.71] => (item=none)
+2024-08-08 17:48:28,435 p=213873 u=iurephu n=ansible | ok: [3.85.50.52] => (item=none)
+2024-08-08 17:48:28,439 p=213873 u=iurephu n=ansible | ok: [54.227.230.67] => (item=none)
+2024-08-08 17:48:28,609 p=213873 u=iurephu n=ansible | ok: [34.203.236.211] => (item=none)
+2024-08-08 17:48:28,621 p=213873 u=iurephu n=ansible | TASK [Disable swap] **************************************************************************************************************************
+2024-08-08 17:48:28,637 p=213873 u=iurephu n=ansible | skipping: [34.203.236.211]
+2024-08-08 17:48:28,643 p=213873 u=iurephu n=ansible | skipping: [54.227.230.67]
+2024-08-08 17:48:28,649 p=213873 u=iurephu n=ansible | skipping: [3.86.204.219]
+2024-08-08 17:48:28,650 p=213873 u=iurephu n=ansible | skipping: [3.85.50.52]
+2024-08-08 17:48:28,654 p=213873 u=iurephu n=ansible | skipping: [52.90.58.71]
+2024-08-08 17:48:28,657 p=213873 u=iurephu n=ansible | TASK [Create directory for Kubernetes apt key] ***********************************************************************************************
+2024-08-08 17:48:31,508 p=213873 u=iurephu n=ansible | ok: [3.86.204.219]
+2024-08-08 17:48:31,687 p=213873 u=iurephu n=ansible | ok: [52.90.58.71]
+2024-08-08 17:48:31,689 p=213873 u=iurephu n=ansible | ok: [54.227.230.67]
+2024-08-08 17:48:31,759 p=213873 u=iurephu n=ansible | ok: [3.85.50.52]
+2024-08-08 17:48:31,772 p=213873 u=iurephu n=ansible | ok: [34.203.236.211]
+2024-08-08 17:48:31,782 p=213873 u=iurephu n=ansible | TASK [Download the Kubernetes apt key] *******************************************************************************************************
+2024-08-08 17:48:34,628 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:48:34,802 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:48:34,929 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:48:34,977 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:48:34,997 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:48:35,008 p=213873 u=iurephu n=ansible | TASK [Add Kubernetes apt repository] *********************************************************************************************************
+2024-08-08 17:48:40,741 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:48:41,320 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:48:41,694 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:48:41,796 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:48:41,809 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:48:41,819 p=213873 u=iurephu n=ansible | TASK [Update the apt package index again] ****************************************************************************************************
+2024-08-08 17:48:49,533 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:48:50,431 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:48:50,547 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:48:50,602 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:48:51,413 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:48:51,424 p=213873 u=iurephu n=ansible | TASK [Install Kubernetes binaries] ***********************************************************************************************************
+2024-08-08 17:49:07,342 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:49:10,766 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:49:11,077 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:49:12,218 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:49:12,757 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:49:12,768 p=213873 u=iurephu n=ansible | TASK [Stop kubelet] **************************************************************************************************************************
+2024-08-08 17:49:17,319 p=213873 u=iurephu n=ansible | ok: [3.86.204.219]
+2024-08-08 17:49:17,629 p=213873 u=iurephu n=ansible | ok: [3.85.50.52]
+2024-08-08 17:49:17,720 p=213873 u=iurephu n=ansible | ok: [34.203.236.211]
+2024-08-08 17:49:17,772 p=213873 u=iurephu n=ansible | ok: [54.227.230.67]
+2024-08-08 17:49:18,272 p=213873 u=iurephu n=ansible | ok: [52.90.58.71]
+2024-08-08 17:49:18,276 p=213873 u=iurephu n=ansible | TASK [Load overlay module] *******************************************************************************************************************
+2024-08-08 17:49:20,948 p=213873 u=iurephu n=ansible | ok: [3.86.204.219]
+2024-08-08 17:49:21,138 p=213873 u=iurephu n=ansible | ok: [52.90.58.71]
+2024-08-08 17:49:21,221 p=213873 u=iurephu n=ansible | ok: [54.227.230.67]
+2024-08-08 17:49:21,302 p=213873 u=iurephu n=ansible | ok: [3.85.50.52]
+2024-08-08 17:49:21,303 p=213873 u=iurephu n=ansible | ok: [34.203.236.211]
+2024-08-08 17:49:21,315 p=213873 u=iurephu n=ansible | TASK [Load br_netfilter module] **************************************************************************************************************
+2024-08-08 17:49:24,063 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:49:24,240 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:49:24,323 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:49:24,397 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:49:24,401 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:49:24,410 p=213873 u=iurephu n=ansible | TASK [Persist modules] ***********************************************************************************************************************
+2024-08-08 17:49:30,157 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:49:30,734 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:49:31,118 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:49:31,216 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:49:31,230 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:49:31,239 p=213873 u=iurephu n=ansible | TASK [Set sysctl params] *********************************************************************************************************************
+2024-08-08 17:49:37,436 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:49:38,226 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:49:38,227 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:49:38,230 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:49:38,359 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:49:38,367 p=213873 u=iurephu n=ansible | TASK [Load sysctl settings] ******************************************************************************************************************
+2024-08-08 17:49:40,991 p=213873 u=iurephu n=ansible | changed: [3.86.204.219]
+2024-08-08 17:49:41,166 p=213873 u=iurephu n=ansible | changed: [52.90.58.71]
+2024-08-08 17:49:41,316 p=213873 u=iurephu n=ansible | changed: [54.227.230.67]
+2024-08-08 17:49:41,332 p=213873 u=iurephu n=ansible | changed: [34.203.236.211]
+2024-08-08 17:49:41,435 p=213873 u=iurephu n=ansible | changed: [3.85.50.52]
+2024-08-08 17:49:41,491 p=213873 u=iurephu n=ansible | PLAY RECAP ***********************************************************************************************************************************
+2024-08-08 17:49:41,492 p=213873 u=iurephu n=ansible | 3.85.50.52                 : ok=18   changed=13   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-08 17:49:41,492 p=213873 u=iurephu n=ansible | 3.86.204.219               : ok=18   changed=13   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-08 17:49:41,492 p=213873 u=iurephu n=ansible | 34.203.236.211             : ok=18   changed=13   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-08 17:49:41,492 p=213873 u=iurephu n=ansible | 52.90.58.71                : ok=18   changed=13   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-08 17:49:41,492 p=213873 u=iurephu n=ansible | 54.227.230.67              : ok=18   changed=13   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-08 17:53:17,934 p=218844 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 17:53:17,980 p=218844 u=iurephu n=ansible | PLAY [ha-proxy] ******************************************************************************************************************************
+2024-08-08 17:53:17,984 p=218844 u=iurephu n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2024-08-08 17:53:26,516 p=218844 u=iurephu n=ansible | [WARNING]: Platform linux on host 3.87.219.208 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 17:53:26,516 p=218844 u=iurephu n=ansible | ok: [3.87.219.208]
+2024-08-08 17:53:26,525 p=218844 u=iurephu n=ansible | TASK [Install ha-proxy] **********************************************************************************************************************
+2024-08-08 17:53:57,974 p=218844 u=iurephu n=ansible | changed: [3.87.219.208]
+2024-08-08 17:53:57,982 p=218844 u=iurephu n=ansible | TASK [Start ha-proxy] ************************************************************************************************************************
+2024-08-08 17:54:01,301 p=218844 u=iurephu n=ansible | ok: [3.87.219.208]
+2024-08-08 17:54:01,324 p=218844 u=iurephu n=ansible | PLAY RECAP ***********************************************************************************************************************************
+2024-08-08 17:54:01,324 p=218844 u=iurephu n=ansible | 3.87.219.208               : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-08 18:08:13,091 p=224652 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-08 18:08:13,135 p=224652 u=iurephu n=ansible | PLAY [ha-proxy] ******************************************************************************************************************************
+2024-08-08 18:08:13,139 p=224652 u=iurephu n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************
+2024-08-08 18:08:19,360 p=224652 u=iurephu n=ansible | [WARNING]: Platform linux on host 3.87.219.208 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-08 18:08:19,360 p=224652 u=iurephu n=ansible | ok: [3.87.219.208]
+2024-08-08 18:08:19,369 p=224652 u=iurephu n=ansible | TASK [Install ha-proxy] **********************************************************************************************************************
+2024-08-08 18:08:27,913 p=224652 u=iurephu n=ansible | ok: [3.87.219.208]
+2024-08-08 18:08:27,917 p=224652 u=iurephu n=ansible | TASK [Configure ha-proxy] ********************************************************************************************************************
+2024-08-08 18:08:34,493 p=224652 u=iurephu n=ansible | changed: [3.87.219.208]
+2024-08-08 18:08:34,499 p=224652 u=iurephu n=ansible | TASK [Start ha-proxy] ************************************************************************************************************************
+2024-08-08 18:08:37,659 p=224652 u=iurephu n=ansible | ok: [3.87.219.208]
+2024-08-08 18:08:37,669 p=224652 u=iurephu n=ansible | RUNNING HANDLER [Restart ha-proxy] ***********************************************************************************************************
+2024-08-08 18:08:41,370 p=224652 u=iurephu n=ansible | changed: [3.87.219.208]
+2024-08-08 18:08:41,381 p=224652 u=iurephu n=ansible | PLAY RECAP ***********************************************************************************************************************************
+2024-08-08 18:08:41,381 p=224652 u=iurephu n=ansible | 3.87.219.208               : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
