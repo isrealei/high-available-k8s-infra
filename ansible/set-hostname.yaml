@@ -10,7 +10,7 @@
   tasks:
   - name: Set a kube-master-2 hostaname
     ansible.builtin.hostname:
-      name: kube-master
+      name: kube-master2
 
 
 - hosts: kube-worker1

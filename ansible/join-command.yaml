@@ -1,0 +1,48 @@
+
+# - hosts: kube-worker1
+#   become: true
+#   tasks:
+#   - name: restart containerd
+#     ansible.builtin.systemd:
+#       name: containerd
+#       state: restarted
+
+#   - name: Join the Kubernetes cluster
+#     command: >
+#       kubeadm join 3.83.34.237:6443
+#       --token jhtpbv.4mnukjkurl5qnsfx
+#       --discovery-token-ca-cert-hash sha256:c3da860341c1e3f94ec8a4bc0e3ed1c7a67471f1b7f28fa79c89ed5f40605918
+#     tags: kubeadm
+
+
+- hosts: kube-worker2
+  become: true
+  tasks:
+  - name: restart containerd
+    ansible.builtin.systemd:
+      name: containerd
+      state: restarted
+
+  - name: Join the Kubernetes cluster
+    command: >
+      kubeadm join 3.83.34.237:6443
+      --token jhtpbv.4mnukjkurl5qnsfx
+      --discovery-token-ca-cert-hash sha256:c3da860341c1e3f94ec8a4bc0e3ed1c7a67471f1b7f28fa79c89ed5f40605918
+    tags: kubeadm
+
+
+
+- hosts: kube-worker3
+  become: true
+  tasks:
+  - name: restart containerd
+    ansible.builtin.systemd:
+      name: containerd
+      state: restarted
+
+  - name: Join the Kubernetes cluster
+    command: >
+      kubeadm join 3.83.34.237:6443
+      --token jhtpbv.4mnukjkurl5qnsfx
+      --discovery-token-ca-cert-hash sha256:c3da860341c1e3f94ec8a4bc0e3ed1c7a67471f1b7f28fa79c89ed5f40605918
+    tags: kubeadm
