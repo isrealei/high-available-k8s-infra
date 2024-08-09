@@ -1,0 +1,47 @@
+- hosts: kube-master1
+  become: true
+  tasks:
+  - name: Set a kube-master-1 hostaname
+    ansible.builtin.hostname:
+      name: kube-master1
+
+- hosts: kube-master2
+  become: true
+  tasks:
+  - name: Set a kube-master-2 hostaname
+    ansible.builtin.hostname:
+      name: kube-master
+
+
+- hosts: kube-worker1
+  become: true
+  tasks:
+  - name: Set a kube-worker1 hostaname
+    ansible.builtin.hostname:
+      name: kube-worker1
+
+
+- hosts: kube-worker2
+  become: true
+  tasks:
+  - name: Set a kube-worker2 hostaname
+    ansible.builtin.hostname:
+      name: kube-worker2
+
+
+- hosts: kube-worker3
+  become: true
+  tasks:
+  - name: Set a kube-worker3 hostaname
+    ansible.builtin.hostname:
+      name: kube-worker3
+
+- hosts: ha-proxy
+  become: true
+  tasks:
+  - name: Set a ha-proxy hostaname
+    ansible.builtin.hostname:
+      name: ha-proxy
+
+
+

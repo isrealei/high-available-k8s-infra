@@ -70,14 +70,14 @@ resource "aws_security_group" "k8s-master" {
     cidr_blocks = var.myip
   }
 
-   ingress {
-    description = "allow ingress from haproxy on port 6443"
-    from_port   = 6443
-    to_port     = 6443
-    protocol    = "tcp"
+  ingress {
+    description     = "allow ingress from haproxy on port 6443"
+    from_port       = 6443
+    to_port         = 6443
+    protocol        = "tcp"
     security_groups = [aws_security_group.ha-proxy.id]
   }
-  
+
 
   egress {
     from_port   = 0
@@ -163,7 +163,7 @@ resource "aws_security_group" "ha-proxy" {
     protocol    = "TCP"
     cidr_blocks = ["0.0.0.0/0"]
   }
- 
+
   ingress {
     description = "Allow from anywhere within the vpc"
     from_port   = 6443
@@ -171,7 +171,7 @@ resource "aws_security_group" "ha-proxy" {
     protocol    = "TCP"
     cidr_blocks = [var.cidr]
   }
- ingress {
+  ingress {
     description = "Allow from anywhere within the vpc"
     from_port   = 6443
     to_port     = 6443
