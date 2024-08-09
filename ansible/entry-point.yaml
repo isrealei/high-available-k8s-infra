@@ -1,0 +1,27 @@
+---
+- hosts: cluster-entry-point
+  become: true
+  tasks:
+  - name: Install ha-proxy
+    apt:
+      name: haproxy
+      state: present
+      update_cache: yes
+ 
+  - name: Configure ha-proxy
+    template:
+      src: files/ha-proxy.conf
+      dest: /etc/haproxy/entry-point.conf
+    notify: Restart ha-proxy
+
+  - name: Start ha-proxy
+    service:
+      name: haproxy
+      state: started
+      enabled: yes
+
+  handlers:
+  - name: Restart ha-proxy
+    service:
+      name: haproxy
+      state: restarted

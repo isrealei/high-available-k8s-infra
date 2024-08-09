@@ -23,3 +23,6 @@ output "worker-nodes-ip-2" {
   value = aws_instance.workers[2].public_ip
 }
 
+output "cluster-entry-point" {
+  value = aws_instance.cluster-entry-point.public_ip
+}

@@ -131,6 +131,14 @@ resource "aws_security_group" "k8s-worker" {
     cidr_blocks = var.myip
   }
 
+   ingress {
+    description = "Allow traffic from ingress server"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "TCP"
+    security_groups = [ aws_security_group.ingress-entry-point.id]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -191,6 +199,46 @@ resource "aws_security_group" "ha-proxy" {
   }
 }
 
+# security group for cluster entry point
+
+resource "aws_security_group" "ingress-entry-point" {
+  name   = "ingress-entry-point-sg"
+  vpc_id = module.vpc.vpc_id
+
+  ingress {
+    description = "Allow ssh from my ip"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "TCP"
+    cidr_blocks = var.myip
+  }
+  ingress {
+    description = "Allow from anywhere"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "TCP"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    description = "Allow within vpc"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "TCP"
+    cidr_blocks = [var.cidr]
+  }
+   egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+   tags = {
+    Name    = "ingress-entry-point-sg"
+    project = "barilon"
+  }
+
+}
+
 # master-noder-server
 
 resource "aws_instance" "master" {
@@ -241,6 +289,22 @@ resource "aws_instance" "ha-proxy" {
 
   tags = {
     Name = "ha-proxy-server"
+    app  = "barilon"
+  }
+}
+
+
+resource "aws_instance" "cluster-entry-point" {
+  instance_type               = var.haproxy_instance_type
+  ami                         = lookup(var.amis, var.region)
+  key_name                    = aws_key_pair.master.key_name
+  vpc_security_group_ids      = [aws_security_group.ingress-entry-point.id]
+  subnet_id                   = module.vpc.public_subnets[0]
+  associate_public_ip_address = true
+
+
+  tags = {
+    Name = "ingress-entry-point"
     app  = "barilon"
   }
 }

@@ -1109,3 +1109,55 @@ core/2.17/reference_appendices/interpreter_discovery.html for more information.
 2024-08-09 12:46:58,658 p=78792 u=iurephu n=ansible | PLAY RECAP ***********************************************************************************************************************************
 2024-08-09 12:46:58,658 p=78792 u=iurephu n=ansible | 3.92.178.180               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-08-09 12:46:58,658 p=78792 u=iurephu n=ansible | 44.211.196.210             : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-09 15:13:04,116 p=133473 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-09 15:13:04,128 p=133473 u=iurephu n=ansible | [WARNING]:  * Failed to parse /home/iurephu/terraform/k8s-baremetal/ansible/hosts.ini with ini plugin: host range must be begin:end or
+begin:end:step
+
+2024-08-09 15:13:04,128 p=133473 u=iurephu n=ansible | [WARNING]: Unable to parse /home/iurephu/terraform/k8s-baremetal/ansible/hosts.ini as an inventory source
+
+2024-08-09 15:13:04,128 p=133473 u=iurephu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-08-09 15:13:04,131 p=133473 u=iurephu n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-08-09 15:13:04,175 p=133473 u=iurephu n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: cluster-entry-point
+
+2024-08-09 15:13:04,176 p=133473 u=iurephu n=ansible | PLAY [cluster-entry-point] **********************************************************************************************************************
+2024-08-09 15:13:04,176 p=133473 u=iurephu n=ansible | skipping: no hosts matched
+2024-08-09 15:13:04,176 p=133473 u=iurephu n=ansible | PLAY RECAP **************************************************************************************************************************************
+2024-08-09 15:13:20,442 p=133627 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-09 15:13:20,488 p=133627 u=iurephu n=ansible | PLAY [cluster-entry-point] **********************************************************************************************************************
+2024-08-09 15:13:20,492 p=133627 u=iurephu n=ansible | TASK [Gathering Facts] **************************************************************************************************************************
+2024-08-09 15:13:27,052 p=133627 u=iurephu n=ansible | [WARNING]: Platform linux on host 54.174.113.128 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-09 15:13:27,052 p=133627 u=iurephu n=ansible | ok: [54.174.113.128]
+2024-08-09 15:13:27,060 p=133627 u=iurephu n=ansible | TASK [Install ha-proxy] *************************************************************************************************************************
+2024-08-09 15:13:48,482 p=133627 u=iurephu n=ansible | changed: [54.174.113.128]
+2024-08-09 15:13:48,493 p=133627 u=iurephu n=ansible | TASK [Configure ha-proxy] ***********************************************************************************************************************
+2024-08-09 15:13:54,485 p=133627 u=iurephu n=ansible | changed: [54.174.113.128]
+2024-08-09 15:13:54,494 p=133627 u=iurephu n=ansible | TASK [Start ha-proxy] ***************************************************************************************************************************
+2024-08-09 15:13:57,664 p=133627 u=iurephu n=ansible | ok: [54.174.113.128]
+2024-08-09 15:13:57,673 p=133627 u=iurephu n=ansible | RUNNING HANDLER [Restart ha-proxy] **************************************************************************************************************
+2024-08-09 15:14:00,748 p=133627 u=iurephu n=ansible | changed: [54.174.113.128]
+2024-08-09 15:14:00,763 p=133627 u=iurephu n=ansible | PLAY RECAP **************************************************************************************************************************************
+2024-08-09 15:14:00,763 p=133627 u=iurephu n=ansible | 54.174.113.128             : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-09 15:32:22,788 p=143453 u=iurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-08-09 15:32:22,834 p=143453 u=iurephu n=ansible | PLAY [cluster-entry-point] **********************************************************************************************************************
+2024-08-09 15:32:22,838 p=143453 u=iurephu n=ansible | TASK [Gathering Facts] **************************************************************************************************************************
+2024-08-09 15:32:28,850 p=143453 u=iurephu n=ansible | [WARNING]: Platform linux on host 54.174.113.128 is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-08-09 15:32:28,850 p=143453 u=iurephu n=ansible | ok: [54.174.113.128]
+2024-08-09 15:32:28,859 p=143453 u=iurephu n=ansible | TASK [Install ha-proxy] *************************************************************************************************************************
+2024-08-09 15:32:33,435 p=143453 u=iurephu n=ansible | ok: [54.174.113.128]
+2024-08-09 15:32:33,440 p=143453 u=iurephu n=ansible | TASK [Configure ha-proxy] ***********************************************************************************************************************
+2024-08-09 15:32:38,046 p=143453 u=iurephu n=ansible | ok: [54.174.113.128]
+2024-08-09 15:32:38,051 p=143453 u=iurephu n=ansible | TASK [Start ha-proxy] ***************************************************************************************************************************
+2024-08-09 15:32:41,229 p=143453 u=iurephu n=ansible | ok: [54.174.113.128]
+2024-08-09 15:32:41,246 p=143453 u=iurephu n=ansible | PLAY RECAP **************************************************************************************************************************************
+2024-08-09 15:32:41,246 p=143453 u=iurephu n=ansible | 54.174.113.128             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
