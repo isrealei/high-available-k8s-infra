@@ -294,17 +294,17 @@ resource "aws_instance" "ha-proxy" {
 }
 
 
-resource "aws_instance" "cluster-entry-point" {
-  instance_type               = var.haproxy_instance_type
-  ami                         = lookup(var.amis, var.region)
-  key_name                    = aws_key_pair.master.key_name
-  vpc_security_group_ids      = [aws_security_group.ingress-entry-point.id]
-  subnet_id                   = module.vpc.public_subnets[0]
-  associate_public_ip_address = true
+# resource "aws_instance" "cluster-entry-point" {
+#   instance_type               = var.haproxy_instance_type
+#   ami                         = lookup(var.amis, var.region)
+#   key_name                    = aws_key_pair.master.key_name
+#   vpc_security_group_ids      = [aws_security_group.ingress-entry-point.id]
+#   subnet_id                   = module.vpc.public_subnets[0]
+#   associate_public_ip_address = true
 
 
-  tags = {
-    Name = "ingress-entry-point"
-    app  = "barilon"
-  }
-}
+#   tags = {
+#     Name = "ingress-entry-point"s
+#     app  = "barilon"
+#   }
+# }

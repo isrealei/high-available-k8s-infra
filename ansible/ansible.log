@@ -1161,3 +1161,486 @@ core/2.17/reference_appendices/interpreter_discovery.html for more information.
 2024-08-09 15:32:41,229 p=143453 u=iurephu n=ansible | ok: [54.174.113.128]
 2024-08-09 15:32:41,246 p=143453 u=iurephu n=ansible | PLAY RECAP **************************************************************************************************************************************
 2024-08-09 15:32:41,246 p=143453 u=iurephu n=ansible | 54.174.113.128             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-11 17:00:45,431 p=8561 u=isrealurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see
+details
+
+2024-08-11 17:00:52,068 p=8561 u=isrealurephu n=ansible | 3.92.239.255 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-11 17:00:52,205 p=8561 u=isrealurephu n=ansible | 54.175.147.146 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-11 17:00:52,262 p=8561 u=isrealurephu n=ansible | 3.86.12.178 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-11 17:00:52,403 p=8561 u=isrealurephu n=ansible | 44.202.166.156 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-11 17:00:52,429 p=8561 u=isrealurephu n=ansible | 3.89.117.114 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-11 17:00:57,452 p=8561 u=isrealurephu n=ansible | 44.201.139.67 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-11 17:00:59,537 p=8561 u=isrealurephu n=ansible | 44.206.245.239 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-08-11 17:01:53,788 p=8708 u=isrealurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see
+details
+
+2024-08-11 17:01:54,363 p=8708 u=isrealurephu n=ansible | PLAY [worker_nodeN] ***************************************************************************
+2024-08-11 17:01:54,368 p=8708 u=isrealurephu n=ansible | TASK [Gathering Facts] ************************************************************************
+2024-08-11 17:02:01,599 p=8708 u=isrealurephu n=ansible | ok: [3.86.12.178]
+2024-08-11 17:02:01,724 p=8708 u=isrealurephu n=ansible | ok: [54.175.147.146]
+2024-08-11 17:02:01,741 p=8708 u=isrealurephu n=ansible | ok: [3.92.239.255]
+2024-08-11 17:02:02,002 p=8708 u=isrealurephu n=ansible | ok: [3.89.117.114]
+2024-08-11 17:02:02,257 p=8708 u=isrealurephu n=ansible | ok: [44.202.166.156]
+2024-08-11 17:02:02,294 p=8708 u=isrealurephu n=ansible | TASK [Install packages that allow apt to be used over HTTPS] **********************************
+2024-08-11 17:02:21,318 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:02:21,329 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:02:21,429 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:02:22,369 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:02:23,772 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:02:23,784 p=8708 u=isrealurephu n=ansible | TASK [Add Docker GPG key] *********************************************************************
+2024-08-11 17:02:27,371 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:02:27,441 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:02:27,569 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:02:27,899 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:02:28,823 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:02:28,833 p=8708 u=isrealurephu n=ansible | TASK [Add Docker APT repository] **************************************************************
+2024-08-11 17:02:37,383 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:02:37,570 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:02:37,570 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:02:38,960 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:02:39,506 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:02:39,517 p=8708 u=isrealurephu n=ansible | TASK [Install containerd] *********************************************************************
+2024-08-11 17:02:50,871 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:02:51,009 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:02:51,666 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:02:53,061 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:02:53,246 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:02:53,266 p=8708 u=isrealurephu n=ansible | TASK [Configure containerd] *******************************************************************
+2024-08-11 17:02:59,945 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:02:59,946 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:02:59,991 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:03:00,053 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:03:01,465 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:03:01,475 p=8708 u=isrealurephu n=ansible | TASK [Remove swapfile from /etc/fstab] ********************************************************
+2024-08-11 17:03:04,322 p=8708 u=isrealurephu n=ansible | ok: [3.89.117.114] => (item=swap)
+2024-08-11 17:03:04,421 p=8708 u=isrealurephu n=ansible | ok: [3.86.12.178] => (item=swap)
+2024-08-11 17:03:04,444 p=8708 u=isrealurephu n=ansible | ok: [3.92.239.255] => (item=swap)
+2024-08-11 17:03:04,836 p=8708 u=isrealurephu n=ansible | ok: [54.175.147.146] => (item=swap)
+2024-08-11 17:03:05,330 p=8708 u=isrealurephu n=ansible | ok: [44.202.166.156] => (item=swap)
+2024-08-11 17:03:06,950 p=8708 u=isrealurephu n=ansible | ok: [3.86.12.178] => (item=none)
+2024-08-11 17:03:07,302 p=8708 u=isrealurephu n=ansible | ok: [3.89.117.114] => (item=none)
+2024-08-11 17:03:07,308 p=8708 u=isrealurephu n=ansible | ok: [3.92.239.255] => (item=none)
+2024-08-11 17:03:07,819 p=8708 u=isrealurephu n=ansible | ok: [54.175.147.146] => (item=none)
+2024-08-11 17:03:08,968 p=8708 u=isrealurephu n=ansible | ok: [44.202.166.156] => (item=none)
+2024-08-11 17:03:08,981 p=8708 u=isrealurephu n=ansible | TASK [Disable swap] ***************************************************************************
+2024-08-11 17:03:09,003 p=8708 u=isrealurephu n=ansible | skipping: [3.89.117.114]
+2024-08-11 17:03:09,011 p=8708 u=isrealurephu n=ansible | skipping: [54.175.147.146]
+2024-08-11 17:03:09,018 p=8708 u=isrealurephu n=ansible | skipping: [44.202.166.156]
+2024-08-11 17:03:09,018 p=8708 u=isrealurephu n=ansible | skipping: [3.86.12.178]
+2024-08-11 17:03:09,022 p=8708 u=isrealurephu n=ansible | skipping: [3.92.239.255]
+2024-08-11 17:03:09,026 p=8708 u=isrealurephu n=ansible | TASK [Create directory for Kubernetes apt key] ************************************************
+2024-08-11 17:03:12,127 p=8708 u=isrealurephu n=ansible | ok: [3.86.12.178]
+2024-08-11 17:03:12,143 p=8708 u=isrealurephu n=ansible | ok: [3.89.117.114]
+2024-08-11 17:03:12,149 p=8708 u=isrealurephu n=ansible | ok: [54.175.147.146]
+2024-08-11 17:03:12,149 p=8708 u=isrealurephu n=ansible | ok: [3.92.239.255]
+2024-08-11 17:03:12,554 p=8708 u=isrealurephu n=ansible | ok: [44.202.166.156]
+2024-08-11 17:03:12,566 p=8708 u=isrealurephu n=ansible | TASK [Download the Kubernetes apt key] ********************************************************
+2024-08-11 17:03:15,593 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:03:15,824 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:03:15,824 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:03:15,900 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:03:16,113 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:03:16,125 p=8708 u=isrealurephu n=ansible | TASK [Add Kubernetes apt repository] **********************************************************
+2024-08-11 17:03:22,046 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:03:22,176 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:03:22,225 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:03:22,616 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:03:23,838 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:03:23,847 p=8708 u=isrealurephu n=ansible | TASK [Update the apt package index again] *****************************************************
+2024-08-11 17:03:31,174 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:03:31,422 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:03:31,503 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:03:32,052 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:03:32,240 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:03:32,247 p=8708 u=isrealurephu n=ansible | TASK [Install Kubernetes binaries] ************************************************************
+2024-08-11 17:03:48,490 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:03:49,591 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:03:49,989 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:03:50,743 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:03:52,247 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:03:52,261 p=8708 u=isrealurephu n=ansible | TASK [Stop kubelet] ***************************************************************************
+2024-08-11 17:03:57,285 p=8708 u=isrealurephu n=ansible | ok: [3.86.12.178]
+2024-08-11 17:03:57,286 p=8708 u=isrealurephu n=ansible | ok: [3.89.117.114]
+2024-08-11 17:03:57,286 p=8708 u=isrealurephu n=ansible | ok: [54.175.147.146]
+2024-08-11 17:03:57,287 p=8708 u=isrealurephu n=ansible | ok: [3.92.239.255]
+2024-08-11 17:03:58,127 p=8708 u=isrealurephu n=ansible | ok: [44.202.166.156]
+2024-08-11 17:03:58,137 p=8708 u=isrealurephu n=ansible | TASK [Load overlay module] ********************************************************************
+2024-08-11 17:04:00,852 p=8708 u=isrealurephu n=ansible | ok: [3.86.12.178]
+2024-08-11 17:04:00,984 p=8708 u=isrealurephu n=ansible | ok: [54.175.147.146]
+2024-08-11 17:04:00,984 p=8708 u=isrealurephu n=ansible | ok: [3.92.239.255]
+2024-08-11 17:04:01,270 p=8708 u=isrealurephu n=ansible | ok: [3.89.117.114]
+2024-08-11 17:04:01,747 p=8708 u=isrealurephu n=ansible | ok: [44.202.166.156]
+2024-08-11 17:04:01,757 p=8708 u=isrealurephu n=ansible | TASK [Load br_netfilter module] ***************************************************************
+2024-08-11 17:04:04,573 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:04:04,734 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:04:04,735 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:04:04,808 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:04:05,010 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:04:05,020 p=8708 u=isrealurephu n=ansible | TASK [Persist modules] ************************************************************************
+2024-08-11 17:04:10,963 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:04:11,329 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:04:11,329 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:04:11,456 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:04:12,432 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:04:12,442 p=8708 u=isrealurephu n=ansible | TASK [Set sysctl params] **********************************************************************
+2024-08-11 17:04:18,610 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:04:18,616 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:04:18,705 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:04:18,996 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:04:19,721 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:04:19,728 p=8708 u=isrealurephu n=ansible | TASK [Load sysctl settings] *******************************************************************
+2024-08-11 17:04:22,327 p=8708 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:04:22,396 p=8708 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:04:22,611 p=8708 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:04:23,038 p=8708 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:04:23,422 p=8708 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:04:23,487 p=8708 u=isrealurephu n=ansible | PLAY RECAP ************************************************************************************
+2024-08-11 17:04:23,487 p=8708 u=isrealurephu n=ansible | 3.86.12.178                : ok=18   changed=13   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-11 17:04:23,487 p=8708 u=isrealurephu n=ansible | 3.89.117.114               : ok=18   changed=13   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-11 17:04:23,487 p=8708 u=isrealurephu n=ansible | 3.92.239.255               : ok=18   changed=13   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-11 17:04:23,487 p=8708 u=isrealurephu n=ansible | 44.202.166.156             : ok=18   changed=13   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-11 17:04:23,487 p=8708 u=isrealurephu n=ansible | 54.175.147.146             : ok=18   changed=13   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-08-11 17:05:44,595 p=9797 u=isrealurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see
+details
+
+2024-08-11 17:05:44,729 p=9797 u=isrealurephu n=ansible | PLAY [kube-master1] ***************************************************************************
+2024-08-11 17:05:44,737 p=9797 u=isrealurephu n=ansible | TASK [Gathering Facts] ************************************************************************
+2024-08-11 17:05:50,871 p=9797 u=isrealurephu n=ansible | ok: [3.89.117.114]
+2024-08-11 17:05:50,885 p=9797 u=isrealurephu n=ansible | TASK [Set a kube-master-1 hostaname] **********************************************************
+2024-08-11 17:05:54,489 p=9797 u=isrealurephu n=ansible | changed: [3.89.117.114]
+2024-08-11 17:05:54,510 p=9797 u=isrealurephu n=ansible | PLAY [kube-master2] ***************************************************************************
+2024-08-11 17:05:54,512 p=9797 u=isrealurephu n=ansible | TASK [Gathering Facts] ************************************************************************
+2024-08-11 17:06:01,114 p=9797 u=isrealurephu n=ansible | ok: [54.175.147.146]
+2024-08-11 17:06:01,126 p=9797 u=isrealurephu n=ansible | TASK [Set a kube-master-2 hostaname] **********************************************************
+2024-08-11 17:06:04,682 p=9797 u=isrealurephu n=ansible | changed: [54.175.147.146]
+2024-08-11 17:06:04,705 p=9797 u=isrealurephu n=ansible | PLAY [kube-worker1] ***************************************************************************
+2024-08-11 17:06:04,708 p=9797 u=isrealurephu n=ansible | TASK [Gathering Facts] ************************************************************************
+2024-08-11 17:06:10,449 p=9797 u=isrealurephu n=ansible | ok: [44.202.166.156]
+2024-08-11 17:06:10,461 p=9797 u=isrealurephu n=ansible | TASK [Set a kube-worker1 hostaname] ***********************************************************
+2024-08-11 17:06:13,559 p=9797 u=isrealurephu n=ansible | changed: [44.202.166.156]
+2024-08-11 17:06:13,582 p=9797 u=isrealurephu n=ansible | PLAY [kube-worker2] ***************************************************************************
+2024-08-11 17:06:13,584 p=9797 u=isrealurephu n=ansible | TASK [Gathering Facts] ************************************************************************
+2024-08-11 17:06:19,633 p=9797 u=isrealurephu n=ansible | ok: [3.86.12.178]
+2024-08-11 17:06:19,647 p=9797 u=isrealurephu n=ansible | TASK [Set a kube-worker2 hostaname] ***********************************************************
+2024-08-11 17:06:22,910 p=9797 u=isrealurephu n=ansible | changed: [3.86.12.178]
+2024-08-11 17:06:22,932 p=9797 u=isrealurephu n=ansible | PLAY [kube-worker3] ***************************************************************************
+2024-08-11 17:06:22,935 p=9797 u=isrealurephu n=ansible | TASK [Gathering Facts] ************************************************************************
+2024-08-11 17:06:28,833 p=9797 u=isrealurephu n=ansible | ok: [3.92.239.255]
+2024-08-11 17:06:28,848 p=9797 u=isrealurephu n=ansible | TASK [Set a kube-worker3 hostaname] ***********************************************************
+2024-08-11 17:06:31,902 p=9797 u=isrealurephu n=ansible | changed: [3.92.239.255]
+2024-08-11 17:06:31,925 p=9797 u=isrealurephu n=ansible | PLAY [ha-proxy] *******************************************************************************
+2024-08-11 17:06:31,927 p=9797 u=isrealurephu n=ansible | TASK [Gathering Facts] ************************************************************************
+2024-08-11 17:06:37,965 p=9797 u=isrealurephu n=ansible | ok: [44.201.139.67]
+2024-08-11 17:06:37,979 p=9797 u=isrealurephu n=ansible | TASK [Set a ha-proxy hostaname] ***************************************************************
+2024-08-11 17:06:41,223 p=9797 u=isrealurephu n=ansible | changed: [44.201.139.67]
+2024-08-11 17:06:41,246 p=9797 u=isrealurephu n=ansible | PLAY RECAP ************************************************************************************
+2024-08-11 17:06:41,246 p=9797 u=isrealurephu n=ansible | 3.86.12.178                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-11 17:06:41,246 p=9797 u=isrealurephu n=ansible | 3.89.117.114               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-11 17:06:41,246 p=9797 u=isrealurephu n=ansible | 3.92.239.255               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-11 17:06:41,246 p=9797 u=isrealurephu n=ansible | 44.201.139.67              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-11 17:06:41,246 p=9797 u=isrealurephu n=ansible | 44.202.166.156             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-11 17:06:41,246 p=9797 u=isrealurephu n=ansible | 54.175.147.146             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-08-11 17:16:33,465 p=10119 u=isrealurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see
+details
+
+2024-08-11 17:16:33,613 p=10119 u=isrealurephu n=ansible | PLAY [ha-proxy] *******************************************************************************
+2024-08-11 17:16:33,618 p=10119 u=isrealurephu n=ansible | TASK [Gathering Facts] ************************************************************************
+2024-08-11 17:16:39,655 p=10119 u=isrealurephu n=ansible | ok: [44.201.139.67]
+2024-08-11 17:16:39,670 p=10119 u=isrealurephu n=ansible | TASK [Install ha-proxy] ***********************************************************************
+2024-08-11 17:17:03,100 p=10119 u=isrealurephu n=ansible | changed: [44.201.139.67]
+2024-08-11 17:17:03,114 p=10119 u=isrealurephu n=ansible | TASK [Configure ha-proxy] *********************************************************************
+2024-08-11 17:17:09,615 p=10119 u=isrealurephu n=ansible | changed: [44.201.139.67]
+2024-08-11 17:17:09,625 p=10119 u=isrealurephu n=ansible | TASK [Start ha-proxy] *************************************************************************
+2024-08-11 17:17:12,951 p=10119 u=isrealurephu n=ansible | ok: [44.201.139.67]
+2024-08-11 17:17:12,969 p=10119 u=isrealurephu n=ansible | RUNNING HANDLER [Restart ha-proxy] ************************************************************
+2024-08-11 17:17:16,316 p=10119 u=isrealurephu n=ansible | changed: [44.201.139.67]
+2024-08-11 17:17:16,330 p=10119 u=isrealurephu n=ansible | PLAY RECAP ************************************************************************************
+2024-08-11 17:17:16,331 p=10119 u=isrealurephu n=ansible | 44.201.139.67              : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:36:05,745 p=20272 u=isrealurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-12-26 12:36:09,711 p=20272 u=isrealurephu n=ansible | 44.202.166.156 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:AlWx2UhNwacvx41TCxvtU0KuJpO51izUZMdu9TI9DEo.\r\nPlease contact your system administrator.\r\nAdd correct host key in /Users/isrealurephu/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /Users/isrealurephu/.ssh/known_hosts:267\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nubuntu@44.202.166.156: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).",
+    "unreachable": true
+}
+2024-12-26 12:36:14,195 p=20272 u=isrealurephu n=ansible | 184.72.98.235 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-12-26 12:36:17,967 p=20272 u=isrealurephu n=ansible | 54.164.31.87 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-12-26 12:36:21,650 p=20272 u=isrealurephu n=ansible | 34.201.45.227 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-12-26 12:36:26,051 p=20272 u=isrealurephu n=ansible | 174.129.78.183 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-12-26 12:36:30,344 p=20272 u=isrealurephu n=ansible | 54.162.12.133 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-12-26 12:36:34,595 p=20272 u=isrealurephu n=ansible | 34.238.42.118 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-12-26 12:36:51,978 p=20272 u=isrealurephu n=ansible | 3.89.117.114 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 3.89.117.114 port 22: Operation timed out",
+    "unreachable": true
+}
+2024-12-26 12:36:51,980 p=20272 u=isrealurephu n=ansible | 54.175.147.146 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 54.175.147.146 port 22: Operation timed out",
+    "unreachable": true
+}
+2024-12-26 12:36:51,995 p=20272 u=isrealurephu n=ansible | 3.92.239.255 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 3.92.239.255 port 22: Operation timed out",
+    "unreachable": true
+}
+2024-12-26 12:36:51,995 p=20272 u=isrealurephu n=ansible | 3.86.12.178 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 3.86.12.178 port 22: Operation timed out",
+    "unreachable": true
+}
+2024-12-26 12:37:20,680 p=20272 u=isrealurephu n=ansible | 44.206.245.239 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: ssh: connect to host 44.206.245.239 port 22: Operation timed out",
+    "unreachable": true
+}
+2024-12-26 12:38:15,521 p=20485 u=isrealurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-12-26 12:38:15,727 p=20485 u=isrealurephu n=ansible | PLAY [kube-master1] **********************************************************************************************
+2024-12-26 12:38:15,732 p=20485 u=isrealurephu n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2024-12-26 12:38:20,556 p=20485 u=isrealurephu n=ansible | ok: [54.164.31.87]
+2024-12-26 12:38:20,568 p=20485 u=isrealurephu n=ansible | TASK [Set a kube-master-1 hostaname] *****************************************************************************
+2024-12-26 12:38:23,080 p=20485 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:38:23,104 p=20485 u=isrealurephu n=ansible | PLAY [kube-master2] **********************************************************************************************
+2024-12-26 12:38:23,107 p=20485 u=isrealurephu n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2024-12-26 12:38:27,798 p=20485 u=isrealurephu n=ansible | ok: [34.201.45.227]
+2024-12-26 12:38:27,811 p=20485 u=isrealurephu n=ansible | TASK [Set a kube-master-2 hostaname] *****************************************************************************
+2024-12-26 12:38:30,241 p=20485 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:38:30,262 p=20485 u=isrealurephu n=ansible | PLAY [kube-worker1] **********************************************************************************************
+2024-12-26 12:38:30,264 p=20485 u=isrealurephu n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2024-12-26 12:38:35,436 p=20485 u=isrealurephu n=ansible | ok: [174.129.78.183]
+2024-12-26 12:38:35,448 p=20485 u=isrealurephu n=ansible | TASK [Set a kube-worker1 hostaname] ******************************************************************************
+2024-12-26 12:38:37,818 p=20485 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:38:37,841 p=20485 u=isrealurephu n=ansible | PLAY [kube-worker2] **********************************************************************************************
+2024-12-26 12:38:37,843 p=20485 u=isrealurephu n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2024-12-26 12:38:42,644 p=20485 u=isrealurephu n=ansible | ok: [54.162.12.133]
+2024-12-26 12:38:42,659 p=20485 u=isrealurephu n=ansible | TASK [Set a kube-worker2 hostaname] ******************************************************************************
+2024-12-26 12:38:45,029 p=20485 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:38:45,052 p=20485 u=isrealurephu n=ansible | PLAY [kube-worker3] **********************************************************************************************
+2024-12-26 12:38:45,055 p=20485 u=isrealurephu n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2024-12-26 12:38:49,937 p=20485 u=isrealurephu n=ansible | ok: [34.238.42.118]
+2024-12-26 12:38:49,950 p=20485 u=isrealurephu n=ansible | TASK [Set a kube-worker3 hostaname] ******************************************************************************
+2024-12-26 12:38:52,364 p=20485 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:38:52,410 p=20485 u=isrealurephu n=ansible | PLAY [ha-proxy] **************************************************************************************************
+2024-12-26 12:38:52,412 p=20485 u=isrealurephu n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2024-12-26 12:38:57,297 p=20485 u=isrealurephu n=ansible | ok: [184.72.98.235]
+2024-12-26 12:38:57,310 p=20485 u=isrealurephu n=ansible | TASK [Set a ha-proxy hostaname] **********************************************************************************
+2024-12-26 12:38:59,739 p=20485 u=isrealurephu n=ansible | changed: [184.72.98.235]
+2024-12-26 12:38:59,759 p=20485 u=isrealurephu n=ansible | PLAY RECAP *******************************************************************************************************
+2024-12-26 12:38:59,759 p=20485 u=isrealurephu n=ansible | 174.129.78.183             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:38:59,759 p=20485 u=isrealurephu n=ansible | 184.72.98.235              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:38:59,759 p=20485 u=isrealurephu n=ansible | 34.201.45.227              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:38:59,759 p=20485 u=isrealurephu n=ansible | 34.238.42.118              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:38:59,759 p=20485 u=isrealurephu n=ansible | 54.162.12.133              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:38:59,759 p=20485 u=isrealurephu n=ansible | 54.164.31.87               : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:42:01,104 p=20960 u=isrealurephu n=ansible | ERROR! the playbook: k8s-component.yaml could not be found
+2024-12-26 12:42:08,087 p=20979 u=isrealurephu n=ansible | ERROR! the playbook: k8s-component.yml could not be found
+2024-12-26 12:42:32,065 p=21016 u=isrealurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-12-26 12:42:32,235 p=21016 u=isrealurephu n=ansible | PLAY [worker_nodeN] **********************************************************************************************
+2024-12-26 12:42:32,240 p=21016 u=isrealurephu n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2024-12-26 12:42:35,503 p=21016 u=isrealurephu n=ansible | fatal: [44.202.166.156]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ED25519 key sent by the remote host is\nSHA256:AlWx2UhNwacvx41TCxvtU0KuJpO51izUZMdu9TI9DEo.\r\nPlease contact your system administrator.\r\nAdd correct host key in /Users/isrealurephu/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /Users/isrealurephu/.ssh/known_hosts:267\r\nUpdateHostkeys is disabled because the host key is not trusted.\r\nubuntu@44.202.166.156: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).", "unreachable": true}
+2024-12-26 12:43:18,317 p=21016 u=isrealurephu n=ansible | fatal: [54.175.147.146]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 54.175.147.146 port 22: Operation timed out", "unreachable": true}
+2024-12-26 12:43:18,319 p=21016 u=isrealurephu n=ansible | fatal: [3.89.117.114]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 3.89.117.114 port 22: Operation timed out", "unreachable": true}
+2024-12-26 12:43:18,319 p=21016 u=isrealurephu n=ansible | fatal: [3.86.12.178]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 3.86.12.178 port 22: Operation timed out", "unreachable": true}
+2024-12-26 12:43:18,331 p=21016 u=isrealurephu n=ansible | fatal: [3.92.239.255]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 3.92.239.255 port 22: Operation timed out", "unreachable": true}
+2024-12-26 12:43:18,334 p=21016 u=isrealurephu n=ansible | PLAY RECAP *******************************************************************************************************
+2024-12-26 12:43:18,334 p=21016 u=isrealurephu n=ansible | 3.86.12.178                : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:43:18,334 p=21016 u=isrealurephu n=ansible | 3.89.117.114               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:43:18,334 p=21016 u=isrealurephu n=ansible | 3.92.239.255               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:43:18,334 p=21016 u=isrealurephu n=ansible | 44.202.166.156             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:43:18,334 p=21016 u=isrealurephu n=ansible | 54.175.147.146             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-26 12:47:38,274 p=21187 u=isrealurephu n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2024-12-26 12:47:38,430 p=21187 u=isrealurephu n=ansible | PLAY [worker_nodeN] **********************************************************************************************
+2024-12-26 12:47:38,435 p=21187 u=isrealurephu n=ansible | TASK [Gathering Facts] *******************************************************************************************
+2024-12-26 12:47:43,231 p=21187 u=isrealurephu n=ansible | ok: [174.129.78.183]
+2024-12-26 12:47:43,232 p=21187 u=isrealurephu n=ansible | ok: [54.162.12.133]
+2024-12-26 12:47:43,233 p=21187 u=isrealurephu n=ansible | ok: [54.164.31.87]
+2024-12-26 12:47:43,234 p=21187 u=isrealurephu n=ansible | ok: [34.201.45.227]
+2024-12-26 12:47:43,235 p=21187 u=isrealurephu n=ansible | ok: [34.238.42.118]
+2024-12-26 12:47:43,268 p=21187 u=isrealurephu n=ansible | TASK [Install packages that allow apt to be used over HTTPS] *****************************************************
+2024-12-26 12:47:59,694 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:47:59,696 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:47:59,721 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:47:59,948 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:00,195 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:00,207 p=21187 u=isrealurephu n=ansible | TASK [Add Docker GPG key] ****************************************************************************************
+2024-12-26 12:48:02,979 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:02,981 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:02,981 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:02,981 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:02,982 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:02,988 p=21187 u=isrealurephu n=ansible | TASK [Add Docker APT repository] *********************************************************************************
+2024-12-26 12:48:09,117 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:09,298 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:09,303 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:09,391 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:09,812 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:09,825 p=21187 u=isrealurephu n=ansible | TASK [Install containerd] ****************************************************************************************
+2024-12-26 12:48:21,614 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:21,704 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:21,873 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:21,948 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:22,329 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:22,344 p=21187 u=isrealurephu n=ansible | TASK [Configure containerd] **************************************************************************************
+2024-12-26 12:48:26,924 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:26,925 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:26,925 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:26,925 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:26,926 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:26,934 p=21187 u=isrealurephu n=ansible | TASK [restart containerd] ****************************************************************************************
+2024-12-26 12:48:29,405 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:29,406 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:29,406 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:29,407 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:29,407 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:29,414 p=21187 u=isrealurephu n=ansible | TASK [Remove swapfile from /etc/fstab] ***************************************************************************
+2024-12-26 12:48:31,484 p=21187 u=isrealurephu n=ansible | ok: [54.164.31.87] => (item=swap)
+2024-12-26 12:48:31,485 p=21187 u=isrealurephu n=ansible | ok: [54.162.12.133] => (item=swap)
+2024-12-26 12:48:31,485 p=21187 u=isrealurephu n=ansible | ok: [174.129.78.183] => (item=swap)
+2024-12-26 12:48:31,486 p=21187 u=isrealurephu n=ansible | ok: [34.238.42.118] => (item=swap)
+2024-12-26 12:48:31,487 p=21187 u=isrealurephu n=ansible | ok: [34.201.45.227] => (item=swap)
+2024-12-26 12:48:33,434 p=21187 u=isrealurephu n=ansible | ok: [174.129.78.183] => (item=none)
+2024-12-26 12:48:33,435 p=21187 u=isrealurephu n=ansible | ok: [34.201.45.227] => (item=none)
+2024-12-26 12:48:33,439 p=21187 u=isrealurephu n=ansible | ok: [34.238.42.118] => (item=none)
+2024-12-26 12:48:33,441 p=21187 u=isrealurephu n=ansible | ok: [54.162.12.133] => (item=none)
+2024-12-26 12:48:33,443 p=21187 u=isrealurephu n=ansible | ok: [54.164.31.87] => (item=none)
+2024-12-26 12:48:33,455 p=21187 u=isrealurephu n=ansible | TASK [Disable swap] **********************************************************************************************
+2024-12-26 12:48:33,476 p=21187 u=isrealurephu n=ansible | skipping: [54.162.12.133]
+2024-12-26 12:48:33,484 p=21187 u=isrealurephu n=ansible | skipping: [34.201.45.227]
+2024-12-26 12:48:33,491 p=21187 u=isrealurephu n=ansible | skipping: [54.164.31.87]
+2024-12-26 12:48:33,491 p=21187 u=isrealurephu n=ansible | skipping: [174.129.78.183]
+2024-12-26 12:48:33,495 p=21187 u=isrealurephu n=ansible | skipping: [34.238.42.118]
+2024-12-26 12:48:33,500 p=21187 u=isrealurephu n=ansible | TASK [Create directory for Kubernetes apt key] *******************************************************************
+2024-12-26 12:48:35,551 p=21187 u=isrealurephu n=ansible | ok: [174.129.78.183]
+2024-12-26 12:48:35,552 p=21187 u=isrealurephu n=ansible | ok: [54.162.12.133]
+2024-12-26 12:48:35,553 p=21187 u=isrealurephu n=ansible | ok: [34.201.45.227]
+2024-12-26 12:48:35,553 p=21187 u=isrealurephu n=ansible | ok: [54.164.31.87]
+2024-12-26 12:48:35,553 p=21187 u=isrealurephu n=ansible | ok: [34.238.42.118]
+2024-12-26 12:48:35,562 p=21187 u=isrealurephu n=ansible | TASK [Download the Kubernetes apt key] ***************************************************************************
+2024-12-26 12:48:37,685 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:37,685 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:37,685 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:37,686 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:37,686 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:37,689 p=21187 u=isrealurephu n=ansible | TASK [Add Kubernetes apt repository] *****************************************************************************
+2024-12-26 12:48:42,034 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:42,035 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:42,035 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:42,035 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:42,114 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:42,124 p=21187 u=isrealurephu n=ansible | TASK [Load overlay module] ***************************************************************************************
+2024-12-26 12:48:44,162 p=21187 u=isrealurephu n=ansible | ok: [54.164.31.87]
+2024-12-26 12:48:44,163 p=21187 u=isrealurephu n=ansible | ok: [174.129.78.183]
+2024-12-26 12:48:44,165 p=21187 u=isrealurephu n=ansible | ok: [34.238.42.118]
+2024-12-26 12:48:44,165 p=21187 u=isrealurephu n=ansible | ok: [34.201.45.227]
+2024-12-26 12:48:44,168 p=21187 u=isrealurephu n=ansible | ok: [54.162.12.133]
+2024-12-26 12:48:44,176 p=21187 u=isrealurephu n=ansible | TASK [Load br_netfilter module] **********************************************************************************
+2024-12-26 12:48:46,142 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:46,143 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:46,146 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:46,150 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:46,214 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:46,222 p=21187 u=isrealurephu n=ansible | TASK [Persist modules] *******************************************************************************************
+2024-12-26 12:48:50,594 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:50,595 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:50,672 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:50,673 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:50,953 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:50,964 p=21187 u=isrealurephu n=ansible | TASK [Set sysctl params] *****************************************************************************************
+2024-12-26 12:48:55,350 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:55,350 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:55,351 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:55,351 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:55,715 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:55,726 p=21187 u=isrealurephu n=ansible | TASK [Load sysctl settings] **************************************************************************************
+2024-12-26 12:48:57,691 p=21187 u=isrealurephu n=ansible | changed: [54.164.31.87]
+2024-12-26 12:48:57,691 p=21187 u=isrealurephu n=ansible | changed: [34.238.42.118]
+2024-12-26 12:48:57,691 p=21187 u=isrealurephu n=ansible | changed: [54.162.12.133]
+2024-12-26 12:48:57,691 p=21187 u=isrealurephu n=ansible | changed: [34.201.45.227]
+2024-12-26 12:48:57,692 p=21187 u=isrealurephu n=ansible | changed: [174.129.78.183]
+2024-12-26 12:48:57,735 p=21187 u=isrealurephu n=ansible | PLAY RECAP *******************************************************************************************************
+2024-12-26 12:48:57,735 p=21187 u=isrealurephu n=ansible | 174.129.78.183             : ok=16   changed=12   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-12-26 12:48:57,735 p=21187 u=isrealurephu n=ansible | 34.201.45.227              : ok=16   changed=12   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-12-26 12:48:57,735 p=21187 u=isrealurephu n=ansible | 34.238.42.118              : ok=16   changed=12   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-12-26 12:48:57,735 p=21187 u=isrealurephu n=ansible | 54.162.12.133              : ok=16   changed=12   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-12-26 12:48:57,735 p=21187 u=isrealurephu n=ansible | 54.164.31.87               : ok=16   changed=12   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   

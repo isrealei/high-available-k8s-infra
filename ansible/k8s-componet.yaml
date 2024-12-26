@@ -40,6 +40,12 @@
       dest: /etc/containerd/config.toml
       mode: '0644'
 
+  - name: restart containerd
+    ansible.builtin.systemd:
+      name: containerd
+      state: restarted
+
+
   - name: Remove swapfile from /etc/fstab
     mount:
       name: "{{ item }}"
@@ -64,39 +70,39 @@
 
   - name: Download the Kubernetes apt key
     shell: |
-        curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+        curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
     args:
         creates: /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 
   - name: Add Kubernetes apt repository
     copy:
       dest: /etc/apt/sources.list.d/kubernetes.list
-      content: 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /'
+      content: 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /'
       mode: '0644'
       owner: root
       group: root
 
-  - name: Update the apt package index again
-    apt:
-      update_cache: yes
+  # - name: Update the apt package index again
+  #   apt:
+  #     update_cache: yes
 
-  - name: Install Kubernetes binaries
-    apt:
-      name: "{{ packages }}"
-      state: present
-      update_cache: yes
-    vars:
-      packages:
-        - kubelet=1.28.9-2.1
-        - kubeadm=1.28.9-2.1
-        - kubectl=1.28.9-2.1
+  # - name: Install Kubernetes binaries
+  #   apt:
+  #     name: "{{ packages }}"
+  #     state: present
+  #     update_cache: yes
+  #   vars:
+  #     packages:
+  #       - kubelet=1.28.9-2.1
+  #       - kubeadm=1.28.9-2.1
+  #       - kubectl=1.28.9-2.1
     
 
-  - name: Stop kubelet
-    service:
-      name: kubelet
-      daemon_reload: yes
-      state: stopped
+  # - name: Stop kubelet
+  #   service:
+  #     name: kubelet
+  #     daemon_reload: yes
+  #     state: stopped
 
   - name: Load overlay module
     modprobe:

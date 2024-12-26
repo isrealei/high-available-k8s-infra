@@ -33,7 +33,7 @@ variable "amis" {
 }
 
 variable "myip" {
-  default = ["86.138.63.224/32"]
+  default = ["152.37.122.85/32"]
 }
 
 variable "master-instance_count" {
