@@ -1,57 +1,60 @@
 variable "region" {
-  default = "us-east-1"
+  type        = string
+  description = "aws region"
 }
 
 variable "private_subnets_cidr_block" {
-  default = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+  type        = list(string)
+  description = "Private Subnets CIDR Block"
 }
 
 variable "public_subnets_cidr_block" {
-  default = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
+  type        = list(string)
+  description = "public Subnets CIDR Block"
 }
 
 variable "name" {
-  default = "barilon-vpc"
+  type        = string
+  description = "vpc name"
 }
 
 variable "cidr" {
-  default = "10.0.0.0/16"
+  type        = string
+  description = "vpc cidr"
 }
-
 
 
 variable "master_instance_type" {
-  default = "t2.medium"
+  description = "master node instance type"
+}
+
+
+variable "worker_instance_type" {
+  description = "worker node instance type"
+}
+
+
+variable "haproxy_instance_type" {
+  description = "proxy node instance type"
 }
 
 variable "amis" {
-  type = map(string)
-  default = {
-    "us-east-1" = "ami-04a81a99f5ec58529"
-  }
-
+  type        = map(string)
+  description = "ami for master node"
 }
 
 variable "myip" {
-  default = ["152.37.122.85/32"]
+  description = "my ip address to access bastion host"
 }
 
 variable "master-instance_count" {
-  default = "2"
+  description = "master node count"
 }
 
 variable "worker-instance_count" {
-  default = "3"
-}
-
-variable "worker_instance_type" {
-  default = "t2.medium"
-}
-
-variable "haproxy_instance_type" {
-  default = "t2.medium"
+  description = "worker node count"
 }
 
 variable "proxy-instance-count" {
-  default = "1"
+  description = "proxy node count"
 }
