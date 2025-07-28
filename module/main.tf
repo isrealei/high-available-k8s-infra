@@ -245,7 +245,7 @@ resource "aws_security_group" "etcd-sg" {
 resource "aws_instance" "master" {
 
   instance_type               = var.master_instance_type
-  ami                         = lookup(var.amis, var.region)
+  ami                         = data.aws_ami.ubuntu.id
   key_name                    = aws_key_pair.master.key_name
   vpc_security_group_ids      = [aws_security_group.kube-master.id]
   subnet_id                   = module.vpc.public_subnets[count.index]
@@ -259,11 +259,27 @@ resource "aws_instance" "master" {
   }
 }
 
+data "aws_ami" "ubuntu" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["099720109477"] # Canonical
+}
+
 # worker-nodes servers
 resource "aws_instance" "workers" {
 
   instance_type               = var.worker_instance_type
-  ami                         = lookup(var.amis, var.region)
+  ami                         = data.aws_ami.ubuntu.id
   key_name                    = aws_key_pair.master.key_name
   vpc_security_group_ids      = [aws_security_group.k8s-worker.id]
   subnet_id                   = module.vpc.public_subnets[count.index]
@@ -281,7 +297,7 @@ resource "aws_instance" "workers" {
 # ha-rpoxy server
 resource "aws_instance" "load-balancer" {
   instance_type               = var.haproxy_instance_type
-  ami                         = lookup(var.amis, var.region)
+  ami                         = data.aws_ami.ubuntu.id
   key_name                    = aws_key_pair.master.key_name
   vpc_security_group_ids      = [aws_security_group.ha-proxy.id]
   subnet_id                   = module.vpc.public_subnets[0]
@@ -297,10 +313,10 @@ resource "aws_instance" "load-balancer" {
 # etcd nodes 
 resource "aws_instance" "etcd" {
   instance_type               = var.etcd_instance_type
-  ami                         = lookup(var.amis, var.region)
+  ami                         = data.aws_ami.ubuntu.id
   key_name                    = aws_key_pair.master.key_name
   vpc_security_group_ids      = [aws_security_group.etcd-sg.id]
-  subnet_id                   = module.vpc.private_subnets[count.index]
+  subnet_id                   = module.vpc.public_subnets[count.index]
   associate_public_ip_address = false
   count                       = var.etcd-instance_count
 
